@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows MDM Enroll</title>
+</head>
+
+<body>
+
+    <h1>Windows MDM Enroll</h1>
+
+    <p>Copy and paste the following PowerShell command to enroll your device:</p>
+
+    <pre>
+        <code>
+cd $env:temp | Invoke-Expression; Invoke-RestMethod -Method Get -URI https://raw.githubusercontent.com/TheJumpCloud/support/master/scripts/windows/InstallWindowsAgent.ps1 -OutFile InstallWindowsAgent.ps1 | Invoke-Expression; ./InstallWindowsAgent.ps1 -JumpCloudConnectKey "60177636c1297f65912ef0f7b418cd1e2be3360d"
+        </code>
+    </pre>
+
+</body>
+
+</html>
